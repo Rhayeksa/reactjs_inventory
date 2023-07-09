@@ -1,0 +1,2 @@
+# frontend_web_reactjs_app_inventory
+Frontend application for management items inventory
