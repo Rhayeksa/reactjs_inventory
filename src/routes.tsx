@@ -2,8 +2,8 @@ import { Home } from "./pages/home";
 import { Error } from "./pages/error";
 import { Add as AddItem } from "./pages/item/add";
 import { EditById as EditByIdItem } from "./pages/item/editById";
-import { FindAll as FindAllItem } from "./pages/item/findAll";
-import { FindById as FindByIdItem } from "./pages/item/findById";
+import { List as ListItem } from "./pages/item/list";
+import { Detail as DetailItem } from "./pages/item/detail";
 import { RemoveById as RemoveByIdItem } from "./pages/item/removeById";
 
 const routes = [
@@ -17,11 +17,11 @@ const routes = [
     },
     {
         "path": "/item",
-        "page": <FindAllItem />
+        "page": <ListItem />
     },
     {
         "path": "/item/:id",
-        "page": <FindByIdItem />
+        "page": <DetailItem />
     },
     {
         "path": "/item/add",

@@ -1,13 +1,16 @@
+import { Container } from "@mui/material";
 import { useParams } from "react-router-dom";
-import { Navbar } from "../../components/navbar";
+import { NavbarComponent } from "../../components/navbarComponent";
 
 const RemoveById = () => {
     const { id } = useParams();
     return (
-        <div>
-            <Navbar />
-            <h1>Remove Item with ID : {id}</h1>
-        </div>
+        <>
+            <NavbarComponent />
+            <Container maxWidth="xl">
+                <h1>Remove Item with ID : {id}</h1>
+            </Container>
+        </>
     )
 }
 

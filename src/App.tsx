@@ -13,7 +13,7 @@ const App = () => {
                     <Route key={index} path={item.path} element={item.page} />
                 ))}
             </Routes>
-        </BrowserRouter>
+        </BrowserRouter >
     )
 }
 
