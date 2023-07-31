@@ -1,27 +1,34 @@
-import { Box, Container } from "@mui/material";
+import { Box, Container, Divider, Typography } from "@mui/material";
 import { CardListComponent } from "../components/cardListComponent";
 import { NavbarComponent } from "../components/navbarComponent";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <NavbarComponent />
       <Container maxWidth="xl">
-        <h1>New Item</h1>
-        <Box display={"flex"} flexWrap={"wrap"}>
-          <CardListComponent name="Item 1" quantity={30} />
-          <CardListComponent name="Item 1" quantity={30} />
-          <CardListComponent name="Item 1" quantity={30} />
-          <CardListComponent name="Item 1" quantity={30} />
+        <Box mb={5}>
+          <Typography variant="h4" gutterBottom fontWeight={"bold"}>
+            New Item
+          </Typography>
+          <Divider sx={{ mb: 3 }} />
+          <Box display={"flex"} flexWrap={"wrap"}>
+            {Array.from({ length: 4 }).map((it, index) => (
+              <CardListComponent
+                name={"Item " + (index + 1)}
+                quantity={10}
+                key={index}
+              />
+            ))}
+          </Box>
         </Box>
-        <h1>TODO List</h1>
+
+        <h1>TODO:</h1>
         <ul>
-          <li>show Item desc by id (item terbaru)</li>
-          <li>Item dengan quantity terbanyak</li>
-          <li>Item dengan quantity terrendah</li>
+          <li>Implementasi .env variabel</li>
         </ul>
       </Container>
-    </div>
+    </>
   );
 };
 

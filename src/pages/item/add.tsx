@@ -1,14 +1,25 @@
 import RestartAltIcon from "@mui/icons-material/RestartAlt";
 import SaveIcon from "@mui/icons-material/Save";
 import { Box, Button, Container, TextField, Typography } from "@mui/material";
+// import { useState } from "react";
 import { NavbarComponent } from "../../components/navbarComponent";
 
-const Add = () => {
+const Add = (props: any) => {
+  // const [state, setState] = useState({
+  //   name: "",
+  //   quantity: 0,
+  //   description: "",
+  // });
+
+  const onSave = () => {};
+
   return (
     <>
       <NavbarComponent />
       <Container maxWidth="xl">
-        <h1>Form Add Item</h1>
+        <Typography variant="h4" gutterBottom fontWeight={"bold"}>
+          Form Add Item
+        </Typography>
         <TextField
           required
           id="item-name"
@@ -41,9 +52,13 @@ const Add = () => {
         />
         <Box>
           <Button variant="contained" sx={{ mr: 3 }} endIcon={<SaveIcon />}>
-            <Typography>Submit</Typography>
+            <Typography>Save</Typography>
           </Button>
-          <Button variant="contained" endIcon={<RestartAltIcon />}>
+          <Button
+            variant="contained"
+            endIcon={<RestartAltIcon />}
+            onClick={onSave}
+          >
             <Typography>Reset</Typography>
           </Button>
         </Box>
